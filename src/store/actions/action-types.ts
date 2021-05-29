@@ -1,0 +1,3 @@
+export const UPDATE_FIRST = `UPDATE_FIRST`;
+export const UPDATE_SECOND = `UPDATE_SECOND`;
+export const UPDATE_THIRD = `UPDATE_THIRD`;

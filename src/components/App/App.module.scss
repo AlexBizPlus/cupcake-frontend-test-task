@@ -1,0 +1,48 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+// ---------- Desktop ----------------
+
+.wrap {
+  @include flex-column(flex-start, center);
+  width: 100%;
+  padding-top: 60px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(4, fit-content(300px));
+}
+
+.cell {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 22px;
+  line-height: 25px;
+  border: 1px solid $border;
+  background-color: $background;
+
+  &__header {
+    font-weight: 600;
+  }
+}
+
+// ---------- Mobile ----------------
+
+@media (max-width: calc(#{$tablet} - 1px) ) {
+  .cell {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 5px;
+    padding-right: 10px;
+    font-size: 14px;
+    line-height: 16px;
+
+    &__header {
+      font-weight: 500;
+      font-style: italic;
+    }
+  }
+}
